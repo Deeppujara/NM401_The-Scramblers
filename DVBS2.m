@@ -1,15 +1,8 @@
-function [Iscr_Qscr,complex_bits,z,C_scrambled,bits] = DVBS2(num_bits,frame_bits,e)
-    m = 18;
-    Tot_bits = ((2^18)-1);
-    frames = ceil(((num_bits)/2)/frame_bits);
+function [Iscr_Qscr,z,C_scrambled,complex_bits,bits] = DVBS2(Tot_bits,num_bits,frame_bits,frames,e,m)
     num_z = ceil((num_bits)*((1/2)+e));
     a = ones(1,num_bits);
     a(1,1:num_z) = 0;
     bits = reshape(a(randperm(num_bits)),1,num_bits);
-    rest_bits = mod(length(bits),frame_bits);
-    if rest_bits ~= 0
-        bits((length(bits)+1):(frame_bits*frames*2)) = 0;
-    end
     scramInit1 = [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
     scramInit2 = [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1];
     for b = 1:m
@@ -31,6 +24,6 @@ function [Iscr_Qscr,complex_bits,z,C_scrambled,bits] = DVBS2(num_bits,frame_bits
     imag = bits(((frame_bits*frames)+1):(frame_bits*frames*2));
     complex_bits = complex(real,imag);
     complex_bits = reshape(complex_bits,frames,frame_bits);
-    complex_bits=double(complex_bits);
-    Iscr_Qscr = ((C_scrambled).*(complex_bits));
+    Iscr_Qscr = (C_scrambled.*complex_bits); 
+    Iscr_Qscr = reshape(Iscr_Qscr,1,(frame_bits*frames));
 end
