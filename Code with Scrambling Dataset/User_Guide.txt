@@ -1,0 +1,24 @@
+"Main_code_Scrambling_Dataset.mlapp" is the main app used for checking which Scrambling Standard/Polynomial was used for Scrambling.
+
+Step 1:
+Open the app and click on the button "Choose file and Estimate" and select one scrambled dataset file.
+
+**note : Here in this folder, there are some scrambled datasets available
+(ex. CCSDS(1) and CCSDS(2) are scrambled dataset for CCSDS, DVBS(1) and DVBS(2) are scrambled dataset for DVBS,
+DVBS2(1) is scrambled dataset for DVBS2 and V35(1) and V35(2) are scrambled dataset for V35)
+
+Step 2:
+When ever you will select a scrambling dataset, after some processing, it will tell you which scrambling standard is used and which polynomial is used.
+
+Step 3:
+Click on the "Reset" button for new process.  
+
+CCSDS_LFSR.mat = Matrix file containing LFSR sequence of CCSDS.
+DVBS_LFSR.mat = Matrix file containing LFSR sequence of DVBS.
+DVBS2_Gold_Sequence.mat = Matrix file containing gold sequence of DVBS2.
+DVBS2_C-scrambled.mat = Matrix file containing C-scrambled sequence of DVBS2.
+
+out_CCSDS.m = For checking CCSDS standard.
+out_DVBS.m = For checking DVBS standard.
+out_DVBS2.m = For checking DVBS2 standard.
+EIGVEC.m = For Eigen analysis.  
