@@ -1,0 +1,14 @@
+This all matlab files are used to blindly check which scrambling poynomial/Standard was used. 
+Main file is "final_code" and other matlab files are functions for Scrambling and descrambling perpose.
+Step 1:
+When a user will run the file "final_code", first it will ask for total number of bits and which standard he/she want to use for scrambling purpose.
+
+Step 2:
+After entering all the data, It will check for for different methods and at the end it will give us the output in the form of graph and which scrambling method we have used.
+
+CCSDS.m = For scrambling bitsequence using CCSDS method.
+DVBS.m = For scrambling bitsequence using DVBS method.
+DVBS2.m = For scrambling bitsequence using DVBS2 method.
+V35.m and scramb.m = For scrambling bitsequence using V35 method.
+deScramb.m = For descrambling bitsequence using V35 method.
+EIGVEC.m = For Eigen analysis. 
