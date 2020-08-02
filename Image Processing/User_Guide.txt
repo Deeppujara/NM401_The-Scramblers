@@ -1,0 +1,42 @@
+Main file/app is "Image_Processing_App.mlapp" used for transmitting scrambled image and at the receiver, finding which scrambling standard and polynomial we have used for scrambling it.
+Also to reconstruct the original image out of scrambled dataset.
+
+Step 1:
+Select "Image" option if a user want to select an image, scrambled it and transmit it.
+Select "Scrambled" option it a user want to find scrambling standard and polynomial from scrambled form of an image.
+
+Step 2:
+Select which standart a user want to use for scrambling purpose.
+**Note: In case of "Scrambled" option, this option will not be visible because a user already have a scrambled dataset.
+
+Step 3:
+Select which tye of Image a user want to transmit (ex. Coloured, Black and White, or a user want to use webcam for live image).
+
+Step 4:
+Click on the "Get File" option for selecting an Image(In case of "Image" option in Step 1) or for selecting a scrambled dataset(In case of "Scrambled" option in Step 1).
+**Note: If you want to select an Image, then select the option "All files" in file type.
+
+Step 5:
+If "Scrambled" option is selected, then enter the value of number of rows and columns to reconstruct the same Image from scrambled data.
+**Note: Some Scrambled dataset for 4-5 Images is given and there names are like "Image type_Scrambling Standard used_Coloured/B&W"
+        The number of rows and columns are given for each Image in the photo "row_Column".
+Step 6:
+Run the code and see the output.
+     
+CCSDS_LFSR.mat = Matrix file containing LFSR sequence of CCSDS.
+DVBS_LFSR.mat = Matrix file containing LFSR sequence of DVBS.
+DVBS2_Gold_Sequence.mat = Matrix file containing gold sequence of DVBS2.
+DVBS2_C-scrambled.mat = Matrix file containing C-scrambled sequence of DVBS2.
+
+image_import.m = To import an image from user.
+BW_image.m = To convert image into black and white form and for B&W form to binary bits.
+Colour_image.m = To convert image into binary bits.
+bits_2_image.m = To convert bits into image.
+image_2_bits.m = To convert image into bits.
+CCSDS_img.m = To convert image bits into CCSDS scrambled form.
+DVBS_img.m = To convert image bits into DVBS scrambled form.
+DVBS2_img.m = To convert image bits into DVBS2 scrambled form.
+out_CCSDS.m = For checking CCSDS standard.
+out_DVBS.m = For checking DVBS standard.
+out_DVBS2.m = For checking DVBS2 standard.
+EIGVEC.m = For Eigen analysis.
