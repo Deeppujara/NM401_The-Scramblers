@@ -1,0 +1,16 @@
+Main File/App is "appforbits.mlapp" which is used to scramble or descramble bits using unknown primitive self-synchronous polynomial.
+
+Step 1:
+Select option "Scrambling" for scrambling the bits and "Descrambling" for descrambling.
+
+Step 2:
+Select any primitive polynomial.
+
+Step 3:
+"Select and Run" if you have any unscrambled dataset and if you want to scramble it and "Run" generate random numbers for Scrambling.
+
+Step 4:
+In Descrambling Process, first enter the value of maximum order of polynomial(m) and select a scrambled dataset.
+
+Stet 5:
+Polynomial will be displayed on "Polynomial" textbox. 
